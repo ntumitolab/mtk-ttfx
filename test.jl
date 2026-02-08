@@ -6,6 +6,6 @@ using OrdinaryDiffEq
 @variables x(t) = 0.0 # dependent variables
 eqs = [D(x) ~ (1 - x) / τ]
 
-@time "Build system" @mktcompile fol = System(eqs, t)
+@time "Build system" @mtkcompile fol = System(eqs, t)
 @time "Build problem" prob = ODEProblem(fol, [], (0.0, 10.0))
 @time "Solve problem" sol = solve(prob, Tsit5())
