@@ -9,7 +9,3 @@ updates:
         applies-to: "version-updates"
         patterns:
           - "*"
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
