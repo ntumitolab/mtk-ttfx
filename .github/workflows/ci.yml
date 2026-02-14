@@ -45,7 +45,7 @@ jobs:
         shell: julia --color=yes {0}
         run: |
           using Pkg
-          Pkg.add([PackageSpec(name="ModelingToolkit", version="${{matrix.mtk_ver}}"), PackageSpec("OrdinaryDiffEq")])
+          Pkg.add([PackageSpec(name="ModelingToolkit", version="${{matrix.mtk_ver}}"), PackageSpec("OrdinaryDiffEq")], preserve=PRESERVE_NONE)
           Pkg.status(PKGMODE_MANIFEST)
       - name: Execute notebook
         run: julia test.jl
